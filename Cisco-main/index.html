@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco Quiz - Hlavní stránka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cisco Quiz</h1>
+    <p>Vyber si test:</p>
+
+    <div class="menu-buttons">
+      <button onclick="startQuiz(10)">Test na 10 otázek</button>
+      <button onclick="startQuiz(25)">Test na 25 otázek</button>
+      <button onclick="startQuiz(50)">Test na 50 otázek</button>
+      <button onclick="startQuiz('all')">Všechny otázky</button>
+    </div>
+  </div>
+
+  <script>
+    function startQuiz(count) {
+      localStorage.setItem("quizCount", count);
+      window.location.href = "quiz.html";
+    }
+  </script>
+</body>
+</html>

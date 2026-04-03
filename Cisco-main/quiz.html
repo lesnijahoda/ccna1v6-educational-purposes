@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cisco Quiz</h1>
+
+    <button onclick="goToMenu()">🏠 Hlavní stránka</button>
+
+    <p id="progress"></p>
+
+    <div id="question"></div>
+
+    <div class="image-wrapper">
+      <img id="questionImage" alt="Obrázek otázky">
+    </div>
+
+    <!-- KLASICKÉ ODPOVĚDI -->
+    <div id="answers"></div>
+
+    <!-- PSANÁ ODPOVĚĎ -->
+    <div id="textAnswerContainer" style="display: none;">
+      <input type="text" id="textAnswer" placeholder="Napiš odpověď sem...">
+    </div>
+
+    <!-- MATCHING -->
+    <div id="matchingContainer" style="display: none;">
+      <div class="matching-layout">
+        <div id="matchingLeft" class="matching-column"></div>
+        <div id="matchingRight" class="matching-column"></div>
+      </div>
+    </div>
+
+    <button onclick="checkAnswer()">Zkontrolovat</button>
+    <button onclick="nextQuestion()">Další otázka</button>
+
+    <div id="result" style="display: none;"></div>
+    <button id="backBtn" onclick="goToMenu()" style="display: none;">Zpět na hlavní stránku</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
